@@ -1,0 +1,72 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phoneFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f1f3a"/>
+      <stop offset="100%" style="stop-color:#0f0f1a"/>
+    </linearGradient>
+    <linearGradient id="screenContent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b4e"/>
+      <stop offset="50%" style="stop-color:#1a0a2e"/>
+      <stop offset="100%" style="stop-color:#3d1f5c"/>
+    </linearGradient>
+    <linearGradient id="pinkBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+    <filter id="glowEffect">
+      <feDropShadow dx="0" dy="15" stdDeviation="25" flood-color="#ec4899" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <ellipse cx="200" cy="250" rx="150" ry="200" fill="#ec4899" opacity="0.1" filter="url(#glowEffect)"/>
+
+  <!-- Phone body -->
+  <rect x="100" y="30" width="200" height="420" rx="32" fill="url(#phoneFrame)" filter="url(#glowEffect)"/>
+
+  <!-- Screen -->
+  <rect x="112" y="65" width="176" height="355" rx="6" fill="url(#screenContent)"/>
+
+  <!-- Notch -->
+  <rect x="160" y="40" width="80" height="20" rx="10" fill="#0a0a0a"/>
+
+  <!-- Chat interface -->
+  <!-- Header -->
+  <rect x="120" y="75" width="160" height="50" fill="#1a0a2e"/>
+  <circle cx="145" cy="100" r="18" fill="#4a1942"/>
+  <circle cx="145" cy="95" r="8" fill="#6b4380"/>
+  <ellipse cx="145" cy="108" rx="10" ry="7" fill="#6b4380"/>
+  <rect x="170" y="90" width="60" height="8" rx="2" fill="white"/>
+  <rect x="170" y="102" width="40" height="6" rx="2" fill="#10b981"/>
+
+  <!-- Chat messages -->
+  <!-- Received message -->
+  <rect x="125" y="140" width="120" height="35" rx="12" fill="#3d1f5c"/>
+  <rect x="135" y="150" width="80" height="6" rx="2" fill="#9ca3af"/>
+  <rect x="135" y="160" width="60" height="6" rx="2" fill="#9ca3af"/>
+
+  <!-- Sent message -->
+  <rect x="155" y="190" width="120" height="35" rx="12" fill="url(#pinkBtn)"/>
+  <rect x="165" y="200" width="90" height="6" rx="2" fill="white" opacity="0.9"/>
+  <rect x="165" y="210" width="60" height="6" rx="2" fill="white" opacity="0.9"/>
+
+  <!-- Received message -->
+  <rect x="125" y="240" width="100" height="30" rx="12" fill="#3d1f5c"/>
+  <rect x="135" y="250" width="70" height="6" rx="2" fill="#9ca3af"/>
+
+  <!-- Sent message -->
+  <rect x="175" y="285" width="100" height="45" rx="12" fill="url(#pinkBtn)"/>
+  <rect x="185" y="295" width="70" height="6" rx="2" fill="white" opacity="0.9"/>
+  <rect x="185" y="305" width="60" height="6" rx="2" fill="white" opacity="0.9"/>
+  <rect x="185" y="315" width="40" height="6" rx="2" fill="white" opacity="0.9"/>
+
+  <!-- Heart emoji -->
+  <text x="165" y="365" font-size="24">❤️</text>
+
+  <!-- Input bar -->
+  <rect x="120" y="385" width="160" height="28" rx="14" fill="#2d1b4e" stroke="#4a1942"/>
+  <circle cx="265" cy="399" r="10" fill="url(#pinkBtn)"/>
+
+  <!-- Home indicator -->
+  <rect x="170" y="430" width="60" height="5" rx="2.5" fill="#444"/>
+</svg>

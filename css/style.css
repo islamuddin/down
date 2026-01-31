@@ -1,0 +1,1270 @@
+/* ============================================
+   DOWN Dating App - Website Styles
+   Matching Reference Design
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --purple-950: #000000;
+    --purple-900: #1b0415;
+    --pink-900: #8a0f5a;
+    --pink-600: #ff0074;
+    --pink-500: #ec4899;
+    --pink-400: #f472b6;
+    --gradient-pink: linear-gradient(to right, #A734BD, #FF006A);
+    --gray-300: #cfcfcf;
+    --gray-400: #ccc;
+    --gray-500: #aaa;
+    --white: #ffffff;
+    --black: #000000;
+    --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+        #000000 0%,
+        #1b0415 40%,
+        #8a0f5a 70%,
+        #ff0074 100%);
+    background-attachment: fixed;
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+.gradient-text {
+    background: linear-gradient(to right, #A734BD, #FF006A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.cursive-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+
+/* ============================================
+   Header / Navbar
+   ============================================ */
+.header {
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+}
+
+.nav-menu li a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    transition: color 0.15s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 28px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-menu-mobile {
+    padding: 20px 0;
+}
+
+.nav-menu-mobile li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu-mobile li a {
+    font-size: 18px;
+    color: var(--white);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    padding: 60px 0 80px;
+    position: relative;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-phone {
+    max-width: 288px;
+    height: auto;
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+}
+
+.hero-content {
+    padding-left: 40px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #A734BD, #FF006A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.store-badge {
+    height: 50px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Stats Section
+   ============================================ */
+.stats-section {
+    padding: 60px 0;
+}
+
+.stats-card {
+    background: linear-gradient(90deg, #0c0c0c, #1a0018);
+    border-radius: 12px;
+    padding: 50px 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    background: linear-gradient(90deg, #A734BD, #FF006A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 20px;
+    color: var(--gray-400);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ============================================
+   Features Section
+   ============================================ */
+.features-section {
+    padding: 80px 0;
+}
+
+.features-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.feature-item {
+    padding: 40px 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item.border-0 {
+    border-right: none;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-300);
+    margin: 0;
+}
+
+/* ============================================
+   Why Section
+   ============================================ */
+.why-section {
+    padding: 80px 0;
+}
+
+.why-section .section-title {
+    margin-bottom: 60px;
+}
+
+.why-row {
+    padding: 50px 0;
+}
+
+.why-image-box {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.why-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.why-content {
+    padding: 0 20px;
+}
+
+.why-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.why-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cfc7d3;
+    max-width: 520px;
+}
+
+/* ============================================
+   Reviews Section
+   ============================================ */
+.reviews-section {
+    padding: 80px 0;
+}
+
+.reviews-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.reviews-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta-section {
+    padding: 100px 0;
+}
+
+.cta-title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   Press Section
+   ============================================ */
+.press-section {
+    padding: 60px 0;
+}
+
+.press-title {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #A734BD, #FF006A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Dancing Script', cursive;
+}
+
+.press-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 60px;
+    margin-bottom: 30px;
+}
+
+.press-logos img {
+    height: 33px;
+    width: auto;
+    max-width: 150px;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.press-logos img:hover {
+    opacity: 1;
+}
+
+.press-logo-sm {
+    max-width: 120px !important;
+}
+
+.press-text {
+    font-size: 14px;
+    color: var(--gray-400);
+    margin: 0;
+}
+
+.press-text a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.press-text a:hover {
+    color: var(--pink-400);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background: linear-gradient(to right, #18001a, #0a000a);
+    padding: 50px 0 30px;
+    margin-top: 60px;
+}
+
+.footer-main {
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 36px;
+    width: auto;
+}
+
+.footer-desc {
+    font-size: 14px;
+    color: var(--gray-400);
+    line-height: 1.7;
+    max-width: 350px;
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-nav a {
+    font-size: 14px;
+    color: var(--white);
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 20px;
+    transition: color 0.15s ease;
+}
+
+.social-links a:hover {
+    color: var(--pink-400);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    color: var(--gray-500);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--gray-500);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-links span {
+    color: var(--gray-500);
+}
+
+/* ============================================
+   FAQ Page Styles
+   ============================================ */
+.faq-hero {
+    padding: 48px 0;
+}
+
+.faq-bubbles-img {
+    display: block;
+}
+
+.faq-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.faq-section {
+    padding: 32px 0 96px;
+}
+
+.faq-section .container {
+    max-width: 900px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.faq-question span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    padding-right: 16px;
+}
+
+.faq-question i {
+    font-size: 18px;
+    color: var(--white);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-question:not(.collapsed) i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 4px 24px 18px;
+}
+
+.faq-answer p {
+    font-size: 13px;
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ============================================
+   Contact Page Styles
+   ============================================ */
+.contact-section {
+    padding: 60px 0 100px;
+    min-height: calc(100vh - 200px);
+}
+
+.contact-title {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.contact-text {
+    font-size: 15px;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.contact-email {
+    color: #f472b6;
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+    transition: color 0.2s ease;
+}
+
+.contact-email:hover {
+    color: var(--pink-400);
+    text-decoration: underline;
+}
+
+.contact-image-wrapper {
+    margin-top: 20px;
+}
+
+.contact-image {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.contact-form-card .form-group {
+    margin-bottom: 24px;
+}
+
+.contact-form-card .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.contact-form-card .form-control {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.contact-form-card .form-control:focus {
+    outline: none;
+    border-color: var(--pink-500);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+.contact-form-card .form-control::placeholder {
+    color: var(--gray-500);
+}
+
+.contact-form-card textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* reCAPTCHA Box */
+.recaptcha-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.recaptcha-box input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    accent-color: #4285f4;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.recaptcha-box label {
+    font-size: 14px;
+    color: var(--gray-300);
+    margin: 0;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.recaptcha-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.recaptcha-logo span {
+    font-size: 10px;
+    color: var(--gray-500);
+}
+
+/* Submit Button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #db2777 0%, #c026d3 100%);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(219, 39, 119, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--pink-500);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-control::placeholder {
+    color: var(--gray-500);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #db2777 0%, #c026d3 100%);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(219, 39, 119, 0.4);
+}
+
+/* Card Dark */
+.card-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+/* ============================================
+   Careers Page Styles
+   ============================================ */
+.careers-hero {
+    padding: 60px 0;
+}
+
+.careers-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #db2777 0%, #c026d3 100%);
+    border-radius: 14px;
+    margin: 0 auto 16px;
+    font-size: 24px;
+}
+
+.benefit-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.benefit-text {
+    font-size: 12px;
+    color: var(--gray-400);
+}
+
+/* Job Cards */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.job-card {
+    padding: 28px;
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--pink-400);
+    margin-bottom: 16px;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.job-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--gray-300);
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+/* Office Gallery */
+.office-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.office-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ============================================
+   Terms & Press Article Pages
+   ============================================ */
+.terms-hero,
+.article-header {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.terms-title {
+    font-size: 52px;
+}
+
+.terms-content,
+.article-content {
+    padding: 40px 0 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms-section {
+    margin-bottom: 40px;
+}
+
+.terms-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.terms-section p,
+.terms-section li {
+    font-size: 14px;
+    color: var(--gray-400);
+    line-height: 1.8;
+}
+
+.terms-section ul {
+    padding-left: 24px;
+    margin-bottom: 16px;
+    list-style: disc;
+}
+
+.terms-section li {
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .section-title,
+    .reviews-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .hero {
+        padding: 40px 0 60px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .app-buttons {
+        justify-content: center;
+    }
+
+    .stats-card {
+        padding: 30px 20px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+
+    .feature-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .office-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-nav {
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .contact-section {
+        padding: 40px 0 80px;
+    }
+
+    .contact-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-phone {
+        max-width: 220px;
+    }
+
+    .section-title,
+    .reviews-title,
+    .cta-title {
+        font-size: 32px;
+    }
+
+    .why-content h3 {
+        font-size: 26px;
+    }
+
+    .why-content p {
+        font-size: 16px;
+    }
+
+    .press-title {
+        font-size: 50px;
+    }
+
+    .press-logos {
+        gap: 30px 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reviews-section .row {
+        flex-direction: column;
+    }
+
+    .reviews-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-title {
+        font-size: 40px;
+    }
+
+    .contact-image-wrapper {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contact-image {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .hero {
+        padding: 30px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .store-badge {
+        height: 42px;
+    }
+
+    .stats-card {
+        padding: 25px 15px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .feature-item {
+        padding: 25px 20px;
+    }
+
+    .feature-item h3 {
+        font-size: 20px;
+    }
+
+    .why-content h3 {
+        font-size: 22px;
+    }
+
+    .cta-title {
+        font-size: 26px;
+    }
+
+    .press-title {
+        font-size: 40px;
+    }
+
+    .press-logos img {
+        height: 25px;
+    }
+
+    .benefits-grid,
+    .jobs-grid,
+    .office-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .faq-bubbles-img {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 20px;
+    }
+
+    .contact-title,
+    .careers-title {
+        font-size: 32px;
+    }
+
+    .contact-form-card {
+        padding: 24px;
+    }
+
+    .contact-image {
+        max-width: 100%;
+    }
+
+    .terms-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}

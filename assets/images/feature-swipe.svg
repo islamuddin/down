@@ -1,0 +1,57 @@
+<svg width="300" height="250" viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b4e"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="pinkGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="5" dy="5" stdDeviation="10" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Phone with swipe animation -->
+  <g transform="translate(90, 20)">
+    <!-- Phone frame -->
+    <rect width="120" height="210" rx="20" fill="#1a1a2e" filter="url(#cardShadow)"/>
+    <rect x="6" y="25" width="108" height="160" rx="4" fill="url(#cardBg)"/>
+
+    <!-- Profile card -->
+    <rect x="12" y="35" width="96" height="130" rx="10" fill="#3d1f5c"/>
+
+    <!-- Profile silhouette -->
+    <circle cx="60" cy="75" r="25" fill="#4a1942"/>
+    <circle cx="60" cy="68" r="12" fill="#6b4380"/>
+    <ellipse cx="60" cy="88" rx="14" ry="10" fill="#6b4380"/>
+
+    <!-- Name -->
+    <rect x="30" y="115" width="60" height="8" rx="2" fill="#ec4899"/>
+    <rect x="40" y="128" width="40" height="5" rx="2" fill="#666"/>
+    <rect x="35" y="138" width="50" height="5" rx="2" fill="#666"/>
+
+    <!-- Notch -->
+    <rect x="40" y="8" width="40" height="12" rx="6" fill="#0a0a0a"/>
+  </g>
+
+  <!-- Swipe arrows -->
+  <!-- Up arrow (Date) -->
+  <g transform="translate(220, 60)">
+    <circle r="25" fill="url(#pinkGlow)" opacity="0.8"/>
+    <path d="M0 8 L-10 -2 L-4 -2 L-4 -12 L4 -12 L4 -2 L10 -2 Z" fill="white"/>
+    <text x="0" y="40" text-anchor="middle" fill="#ec4899" font-size="10" font-weight="bold">DATE</text>
+  </g>
+
+  <!-- Down arrow (Hookup) -->
+  <g transform="translate(220, 160)">
+    <circle r="25" fill="#10b981" opacity="0.8"/>
+    <path d="M0 -8 L-10 2 L-4 2 L-4 12 L4 12 L4 2 L10 2 Z" fill="white"/>
+    <text x="0" y="40" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">DOWN</text>
+  </g>
+
+  <!-- Curved arrows showing swipe direction -->
+  <path d="M175 80 Q200 50, 195 70" stroke="#ec4899" stroke-width="2" fill="none" stroke-dasharray="4"/>
+  <path d="M175 140 Q200 170, 195 150" stroke="#10b981" stroke-width="2" fill="none" stroke-dasharray="4"/>
+</svg>
